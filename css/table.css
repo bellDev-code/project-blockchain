@@ -1,0 +1,33 @@
+table {
+  width: 60%;
+  margin: auto;
+  border: 1px solid #444444;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #444444;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.time_section {
+  text-align: center;
+}
+
+.bg_blue {
+  background-color: #e3f2fd;
+}
+
+.notice {
+  padding: 30px;
+  text-align: center;
+  font-weight: 600;
+}
