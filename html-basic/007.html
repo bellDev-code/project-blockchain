@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>text fomating</title>
+    <title>Document</title>
+    <style>
+      /* 인접 형제 선택자 */
+      h1 + ul {
+        background: blue;
+      }
+
+      /* 일반 형제 선택자 */
+      /* h1~ul {
+      background: green;
+    } */
+    </style>
   </head>
+
   <body>
-    <b>볼드체!</b>
-    <strong>텍스트 강조</strong>
-    <i>이탤릭체!</i>
+    <section>
+      <ul>
+        <li>ul1-li</li>
+      </ul>
+      <h1>h1</h1>
+      <ul>
+        <li>ul2-li</li>
+      </ul>
+      <ul>
+        <li>ul3-li</li>
+      </ul>
+    </section>
   </body>
 </html>
