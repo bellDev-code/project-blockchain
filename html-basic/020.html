@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제. 다음과 같은 입력 폼을 만드세요.</title>
+
+    <style>
+      th {
+        font-size: 13px;
+        width: 120px;
+        height: 40px;
+        background-color: plum;
+        font-weight: bold;
+      }
+
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid;
+        border-spacing: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 왼쪽 영역 -->
+    <div style="width: 60%; margin-right: 20px; float: left">
+      <center>
+        <h2>문제. 다음과 같은 입력 폼을 만드세요.</h2>
+      </center>
+
+      <p
+        style="
+          color: white;
+          background-color: rgb(85, 130, 214);
+          font-size: 13px;
+          padding: 5px;
+          margin: 0px;
+        "
+      >
+        <b>사용자 정보입력</b>
+      </p>
+
+      <p style="font-size: 13px; margin: 0px">
+        안녕, 내 홈페이지를 자유롭게 이용하진 못하겠지만 회원가입을 꼭 하렴.
+        <br />
+        아래 사항들을 빠짐없이 기록해.
+      </p>
+
+      <br />
+
+      <table style="width: 100%; height: 100%">
+        <tr>
+          <th>사용자 ID</th>
+          <td colspan="3">
+            <input type="text" name="id" id="id" autofocus />
+            <input type="button" value="ID중복확인" />
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td><input type="password" id="pwd_base" /></td>
+          <th>비밀번호 확인</th>
+          <td><input type="password" id="pwd_chk" /></td>
+        </tr>
+        <tr>
+          <th>사용자 이름</th>
+          <td colspan="3"><input type="text" name="name" id="name" /></td>
+        </tr>
+        <tr>
+          <th>주민등록번호</th>
+          <td colspan="3">
+            <input type="text" name="RRN1" id="RRN1" /> -
+            <input type="password" name="RRN2" id="RRN2" />
+          </td>
+        </tr>
+        <tr>
+          <th>생년월일</th>
+          <td>
+            <input
+              type="text"
+              name="birth"
+              id="birth"
+              placeholder="예) 19990102"
+            />
+          </td>
+          <th>성별</th>
+          <td>
+            <label><input type="radio" name="male" id="male" /> 남자 </label>
+            <label
+              ><input type="radio" name="female" id="female" /> 여자
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <th>우편번호</th>
+          <td colspan="3">
+            <input type="tel" name="addr_1" id="addr_1" /> -
+            <input type="tel" name="addr_2" id="addr_2" />
+            <input type="button" value="우편번호검색" />
+          </td>
+        </tr>
+        <tr>
+          <th>주소</th>
+          <td colspan="3"><input type="text" name="addr_1" id="addr_1" /></td>
+        </tr>
+        <tr>
+          <th>나머지주소</th>
+          <td colspan="3"><input type="text" name="addr_2" id="addr_2" /></td>
+        </tr>
+        <tr>
+          <th>E-Mail</th>
+          <td colspan="3">
+            <input type="text" name="mail_id" id="mail_id" /> @
+            <select name="domain" id="domain">
+              <option value="">선택해주세요</option>
+              <option value="1">gmail.com</option>
+              <option value="2">naver.com</option>
+              <option value="3">github.com</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>직업</th>
+          <td colspan="3">
+            <select name="job" id="job">
+              <option value="1">컴퓨터/정보통신</option>
+              <option value="2">기타 1</option>
+              <option value="3">기타 2</option>
+              <option value="4">기타 3</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <center>
+              <input type="button" value="등 록" />
+              <input type="button" value="취 소" />
+            </center>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 오른쪽 영역 -->
+    <div style="width: 33%; float: left">
+      <form style="border: 1px solid; padding: 15px">
+        <legend>Form 요소</legend>
+        <p>
+          이름:
+          <input type="text" name="name" id="name" placeholder="이름 입력" />
+        </p>
+        <p>
+          나이:
+          <input type="text" name="age" id="age" placeholder="나이 입력" />
+        </p>
+        <p>
+          전화:
+          <input type="tel" name="tel" id="tel" placeholder="전화번호 입력" />
+        </p>
+        <p>
+          비밀번호:
+          <input type="password" name="pwd" id="pwd" placeholder="비밀번호" />
+        </p>
+        <p>파일: <input type="file" name="files" id="files" /></p>
+        <p>컬러: <input type="color" name="clr" id="clr" /></p>
+        <p>날짜: <input type="date" name="date" id="date" /></p>
+        <p>시간: <input type="time" name="tm" id="tm" /></p>
+        <p>날짜시간: <input type="datetime" name="dt" id="dt" /></p>
+        <p>범위: <input type="range" name="rng" id="rng" /></p>
+        <p>
+          성별:
+          <label> <input type="radio" name="male" id="male" />남자 </label>
+          <label><input type="radio" name="female" id="female" />여자</label>
+        </p>
+        <p>
+          취미:
+          <label><input type="checkbox" name="socr" id="socr" />축구</label>
+          <label><input type="checkbox" name="bseb" id="bsb" />야구</label>
+          <label><input type="checkbox" name="volb" id="volb" />배구</label>
+          <label><input type="checkbox" name="bskb" id="bskb" />농구</label>
+        </p>
+        <p>
+          거주지:
+          <select name="live" id="live">
+            <option value="1">선택하세요</option>
+            <option value="2">서울</option>
+            <option value="3">부산</option>
+            <option value="4">대전</option>
+            <option value="5">광주</option>
+            <option value="6">대구</option>
+          </select>
+        </p>
+        <p>자기소개 <textarea style="width: 100%"> </textarea></p>
+      </form>
+    </div>
+  </body>
+</html>
