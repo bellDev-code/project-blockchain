@@ -7,6 +7,63 @@
     <title>Document</title>
   </head>
   <body>
+    <script src="user_data.js"></script>
+    <script>
+      const newArray = [];
+      for (let i = 0; i < userList.length; i++) {
+        if (userList[i]["gender"] == ["male"]) {
+          newArray.push(userList[i]);
+        }
+      }
+      // console.log(newArray);
+
+      // const maleUserList = userList.filter((u) => (u.gender = "male"));
+      // console.log(maleUserList);
+    </script>
+    <script>
+      const productList = [
+        {
+          name: "솔의눈",
+          price: 700,
+        },
+        {
+          name: "커피",
+          price: 700,
+        },
+        {
+          name: "파워에이드",
+          price: 1200,
+        },
+        {
+          name: "오렌지",
+          price: 1200,
+        },
+        {
+          name: "보리차",
+          price: 1000,
+        },
+        {
+          name: "밀키스",
+          price: 800,
+        },
+      ];
+      const inputCoin = 800;
+
+      const coinBuying = [];
+      // for (let i = 0; i < productList.length; i++) {
+      //   if (productList[i]["price"] >= [800]) {
+      //     coinBuying.push(productList[i]["name"]);
+      //   }
+      // }
+      // console.log(coinBuying);
+
+      for (const product of productList) {
+        if (product.price <= inputCoin) {
+          coinBuying.push(product);
+        }
+      }
+      // console.log(coinBuying);
+    </script>
     <script></script>
   </body>
 </html>
