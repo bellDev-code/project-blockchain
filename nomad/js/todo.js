@@ -2,10 +2,21 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
+// todolist 지울 수 없고, 새로고침 누르면 지워지는 단점.
+function paintToDo(newTodo) {
+  // console.log("I will paint", newTodo);
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  li.appendChild(span);
+  span.innerText = newTodo;
+  toDoList.appendChild(li);
+}
+
 function handleToDoSubmit(event) {
   event.preventDefault();
-  const newToDo = toDoInput.value;
+  const newTodo = toDoInput.value;
   toDoInput.value = "";
+  paintToDo(newTodo);
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
