@@ -1,3 +1,4 @@
+// 명언 모음
 const quotes = [
   {
     quote: "The way to get started is to quit talking and begin doing.",
@@ -41,10 +42,10 @@ const quotes = [
     author: "Sheda Savage",
   },
 ];
-
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 
+// 오늘의 명언을 Math함수로 랜덤하게 표시하고 싶어서
 const todayQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todayQuote.quote;
