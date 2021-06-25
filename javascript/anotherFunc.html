@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Date()
+      // 특정 시간 강제로 넣는법
+      // const newDate = new Date(2021, 0, 24, 13, 20, 18);
+      // console.log(newDate);
+
+      // const d = new Date();
+      // console.log(d);
+
+      // const year = d.getFullYear();
+      // console.log(year);
+
+      // const month = d.getMonth();
+      // console.log(month);
+
+      // const days = d.getDate();
+      // console.log(days);
+
+      // const hours = d.getHours();
+      // console.log(hours);
+
+      // const minutes = d.getMinutes();
+      // console.log(minutes);
+
+      // const seconds = d.getSeconds();
+      // console.log(seconds);
+    </script>
+    <script>
+      // 정수 - 양수 음수
+      // 오늘을 기준으로 며칠 후, 그 날짜
+      // return 년도/월/일
+      // function getIntervalDate(intervalDay) {
+      //   const d = new Date();
+      //   const yesterday = new Date(d.setDate(d.getDate() - intervalDay));
+      //   console.log(yesterday);
+
+      //   const tomorrow = new Date(d.setDate(d.getDate() + intervalDay));
+      //   console.log(tomorrow);
+      // }
+
+      function getIntervalDate(intervalDay, format) {
+        const now = new Date();
+        const d = new Date(now.getTime() + 60 * 60 * 24 * 1000 * intervalDay);
+        const year = d.getFullYear();
+        const month = d.getMonth() + 1;
+        const day = d.getDate();
+        // return year + "/" + month.toString().padStart(2, 0) + "/" + days;
+        return format
+          .replace("YYYY", year)
+          .replace("MM", month.toString().padStart(2, 0))
+          .replace("DD", day);
+      }
+
+      // console.log(getIntervalDate(5));
+      // console.log(getIntervalDate(5).split("/").join("-"));
+      // console.log(getIntervalDate(5).split("/").join("."));
+      console.log(getIntervalDate(-5, "YYYY-MM-DD"));
+      console.log(getIntervalDate(-5, "YYYY.MM.DD"));
+      console.log(getIntervalDate(-5, "MM.YYYY.DD"));
+    </script>
+  </body>
+</html>

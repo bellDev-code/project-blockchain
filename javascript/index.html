@@ -9,6 +9,10 @@
   <body>
     <script src="user_data.js"></script>
     <script>
+      const getUserList = (gender) => userList.filter((g) => g.gender && g.age);
+      console.log(getUserList());
+    </script>
+    <script>
       const newArray = [];
       // for (let i = 0; i < userList.length; i++) {
       //   if (userList[i]["gender"] == ["male"]) {
@@ -22,8 +26,8 @@
 
       const getUserList = (gender) =>
         userList.filter((g) => g.gender === gender);
-      console.log(getUserList("female"));
-      console.log(getUserList("male"));
+      // console.log(getUserList("female"));
+      // console.log(getUserList("male"));
 
       function add(a, b) {
         return a + b;
@@ -59,11 +63,11 @@
       const a = 1;
       const b = 2;
 
-      console.log(Calculator(a, b, "add"));
-      console.log(Calculator(a, b, "minus"));
-      console.log(Calculator(a, b, "multiply"));
-      console.log(Calculator(a, b, "devide"));
-      console.log(Calculator(a, b, "Error"));
+      // console.log(Calculator(a, b, "add"));
+      // console.log(Calculator(a, b, "minus"));
+      // console.log(Calculator(a, b, "multiply"));
+      // console.log(Calculator(a, b, "devide"));
+      // console.log(Calculator(a, b, "Error"));
     </script>
     <script>
       const productList = [
@@ -124,6 +128,54 @@
       // }
       // console.log(coinBuying);
     </script>
-    <script></script>
+    <script>
+      // const person = {
+      //   firstName: "lee",
+      //   lastName: "jongho",
+      //   // fullName: function () {
+      //   //   return this.firstName + " " + this.lastName;
+      //   // },
+      // };
+
+      // person.fullName = function () {
+      //   return this.firstName + " " + this.lastName;
+      // };
+
+      // console.log(person.fullName());
+
+      // const person = new Object();
+      // person.firstName = "lee";
+      // person.lastName = "jongho";
+
+      // console.log(person);
+    </script>
+    <script>
+      // silce 첫 번째 인수는 시작인덱스 번호, 두 번째 인수는 종료인덱스 번호(옵션)
+      // const text = "apple, banana, phodo";
+      // console.log(text.slice(7, 13));
+      // console.log(text.slice(0));
+      // console.log(text.slice(-12));
+
+      // const tex = "9904121";
+      // console.log(tex.slice(-1));
+
+      // substr , substring
+      // const date = "20210623";
+      // const year = date.slice(0, 4);
+      // const yearTwo = date.substring(0, 4);
+      // const yearThree = date.substr(0, 4);
+
+      // const month = date.slice(4, 6);
+      // const monthTwo = date.substring(4, 6);
+      // const monthThree = date.substr(4, 2);
+
+      // console.log(year);
+      // console.log(yearTwo);
+      // console.log(yearThree);
+
+      // console.log(month);
+      // console.log(monthTwo);
+      // console.log(monthThree);
+    </script>
   </body>
 </html>
