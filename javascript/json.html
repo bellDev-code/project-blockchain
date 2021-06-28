@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="deleteItem();">삭제</button>
+    <script>
+      // JSON 객체
+      // JSON - Javascript Object Notation
+      // JSON 형태는 웹에서 90퍼센트 이상 점유하고 있음.
+      // const productList = [
+      //   {
+      //     name: "솔의눈",
+      //     price: 700,
+      //   },
+      //   {
+      //     name: "커피",
+      //     price: 700,
+      //   },
+      //   {
+      //     name: "파워에이드",
+      //     price: 1200,
+      //   },
+      //   {
+      //     name: "오렌지",
+      //     price: 1200,
+      //   },
+      //   {
+      //     name: "보리차",
+      //     price: 1000,
+      //   },
+      //   {
+      //     name: "밀키스",
+      //     price: 800,
+      //   },
+      // ];
+
+      // const jsonString = JSON.stringify(productList);
+      // console.log(JSON.stringify(productList));
+
+      // const jsonObject = JSON.parse(jsonString);
+      // console.log(jsonObject);
+
+      // window 객체 - 전역객체, Global 객체
+      // alert("이것은 alert 창입니다.");
+
+      // if (confirm("정말 삭제함?")) {
+      //   // 삭제 로직
+      // }
+
+      // const pass = prompt("비밀번호를 입력하세요.");
+      // console.log(pass);
+      // if (pass == null) {
+      // } else if (pass == "") {
+      // } else if (pass !== "") {
+      //   console.log(pass);
+      // }
+
+      // open은 함수 이름 때문에 window 전역변수 선언하고 쓰자.
+      // window.open("https://naver.com");
+
+      // setTimeout(); - 한 번만
+      // setTimeout(setStart, 2000);
+
+      // setInterval() - 계속 실행된다.
+      // setInterval(setStart, 2000);
+
+      function setStart() {
+        alert("헤으응");
+      }
+
+      function deleteItem() {
+        if (confirm("정말 삭제함?")) {
+          // 삭제 로직
+        }
+      }
+    </script>
+  </body>
+</html>

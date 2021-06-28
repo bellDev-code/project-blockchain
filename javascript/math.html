@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="common.js"></script>
+    <script>
+      // Math 객체
+
+      // round() - 파라미터로 전달받은 숫자형 데이터를 반올림 처리한다.
+      // console.log(Math.round(4.9));
+      // console.log(Math.round(4.2));
+
+      // ceil() - 파라미터로 전달받은 숫자형 데이터를 무조건 올림 처리해서 정수로 만든다.
+      // console.log(Math.ceil(4.3));
+
+      // floor() - 무조건 내린다.
+      // console.log(Math.floor(4.9));
+
+      // trunc() - 소수점 이하는 무조건 버리고 정수부분만 반환
+      // console.log(Math.trunc(4.123123));
+
+      // sign() - 양수면 1 음수는 -1, 0이면 0을 반환한다.
+      // console.log(Math.sign(123));
+      // console.log(Math.sign(-123));
+
+      // pow() - 제곱
+      // console.log(Math.pow(8, 2));
+
+      // sqrt() - 루트값
+      // console.log(Math.sqrt(64));
+
+      // abs() - 음수이면 음수 부호 없애고, 양수로 변환
+      // console.log(Math.abs(-50));
+
+      // min(), max()
+      // console.log(Math.min(1, 2, 23, 44, 815, 7888));
+      // console.log(Math.max(1, 2, 23, 44, 815, 7888));
+
+      // random() - 실행할 때 마다 무작위 숫자형 데이터가 나오는데, 0보다 크고 1보다 작은 수가 나온다.
+      // console.log(Math.random());
+      // console.log(Math.floor(Math.random * 10));
+
+      // function getRandomInteger(min, max) {
+      //   return Math.floor(Math.random() * (max - min + 1)) + min;
+      // }
+
+      // console.log(getRandomInteger(1, 10));
+    </script>
+    <script>
+      function rspPlayer(userRsp) {
+        const rsp = ["가위", "바위", "보"];
+        const playerRsp = rsp[getRandomInteger(0, 2)];
+
+        const winValue = {
+          가위: "보",
+          바위: "가위",
+          보: "바위",
+        };
+
+        return {
+          userRsp: userRsp,
+          playerRsp: playerRsp,
+          winner:
+            userRsp == playerRsp ? 0 : winValue[userRsp] == playerRsp ? 1 : -1,
+        };
+      }
+
+      console.table(rspPlayer("가위"));
+    </script>
+  </body>
+</html>
