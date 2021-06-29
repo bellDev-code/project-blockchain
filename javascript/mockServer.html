@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      // Promise
+      const url = "https://64dd091b-811c-4eda-8fe3-cb394e1d7a48.mock.pstmn.io/";
+      // const url =
+      //   "https://64dd091b-811c-4eda-8fe3-cb394e1d7a48.mock.pstmn.io/getUserList";
+      // const url2 =
+      //   "https://64dd091b-811c-4eda-8fe3-cb394e1d7a48.mock.pstmn.io/getProductList";
+      // const data = axios.get(url);
+      // console.log(data); // Promise{}
+
+      // Promise 형태는 외우자 => async, await 배우면 이렇게 안쓰긴함.
+      // function getData() {
+      //   return new Promise(function (resolve, reject) {
+      //     reject(new Error("Request is failed"));
+      //     // axios.get(url).then(function (response) {
+      //     //   resolve(response.data);
+      //     // });
+      //   });
+      // }
+
+      // getData()
+      //   .then(function (jsonData) {
+      //     console.log(jsonData.data);
+      //   })
+      //   .catch(function (err) {
+      //     console.log(err);
+      //   });
+
+      // function getProductList() {
+      //   return new Promise(function (resolve, reject) {
+      //     axios.get(url2).then(function (response) {
+      //       resolve(response.data);
+      //     });
+      //   });
+      // }
+
+      // getProductList().then(function (product) {
+      //   console.log(product);
+      // });
+
+      // Async - Await => 굉장히 쉽다.
+
+      // 서버 데이터 가져오는 함수
+      async function api(url) {
+        return (await axios.get(url)).data;
+      }
+
+      // async function getData(path) {
+      //   const data = (await api(url + path)).data;
+      //   console.log(path, data);
+      // }
+
+      //
+      // async function getProductList() {
+      //   // url + "getProductList"의 형태 => 위에 url 마지막 부분
+      //   // 지웠기 때문이다.
+      //   const data = await api(url + "getProductList");
+      //   console.log(data);
+      // }
+
+      // async function getUserList() {
+      //   const data = await api(url + "getUserList");
+      //   console.log(data);
+      //   for (const user of data.data) {
+      //     if (user.gender == ["female"]) {
+      //       console.log(user);
+      //     }
+      //   }
+      // }
+
+      // getProductList();
+      // getUserList();
+
+      // fetch(); - 복잡하고 불편하다.
+
+      // fetch(url + "getUserList")
+      //   .then(function (response) {
+      //     return response.json();
+      //   })
+      //   .then(function (data) {
+      //     console.log(data);
+      //     // console.log(data.data[0].company);
+      //   });
+    </script>
+  </body>
+</html>

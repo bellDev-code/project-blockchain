@@ -369,8 +369,8 @@ const userList = [
     eyeColor: "brown",
     name: "Carol Barrett",
     gender: "female",
-    company: "FARMAGE",
-    email: "carolbarrett@farmage.com",
+    company: "FARM",
+    email: "carolbarrett@farm.com",
     phone: "+1 (831) 416-2214",
     address: "649 Albany Avenue, Sparkill, Utah, 8456",
     about:

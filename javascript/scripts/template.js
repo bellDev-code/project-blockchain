@@ -1,10 +1,10 @@
 // Template Literals
 
-function hello(name) {
+function hello2(name) {
   console.log("Hello " + name + ". Welcome!");
 }
 
-function hello(name) {
+function hello2(name) {
   console.log(`Hello ${name}. Welcome!`);
 }
 
