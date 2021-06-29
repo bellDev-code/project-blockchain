@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="doSearch(this)">조회</button>
+    <select name="" id="" onchange="doChange(this)">
+      <option value="1">A</option>
+      <option value="2">B</option>
+      <option value="3">C</option>
+      <option value="4">D</option>
+    </select>
+    <script>
+      // this 첫 번째. this = window 객체
+      console.log(this);
+
+      function myFunction() {
+        console.log(this);
+      }
+
+      myFunction();
+
+      // 두 번째
+      // HTML DOM 요소에서 이벤트가 수행이 될때 호출하는 핫무에 this를 파라미터 값으로
+      // 전달하면, 이때 this는 이벤트가 일어나는 그 HTML DOM 요소 그 자체를 의미한다.
+
+      function doSearch(obj) {
+        cosnole.log(obj);
+      }
+
+      function doChange(obj) {
+        console.log(obj);
+        console.log(obj.value);
+      }
+
+      // 세번째는
+      let person = {
+        firstName: "John",
+        lastName: "Doe",
+        // object 안에 함수는 this로 접근한다.
+        getFullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      // person.firstName
+      // person["firstName"]
+    </script>
+  </body>
+</html>
