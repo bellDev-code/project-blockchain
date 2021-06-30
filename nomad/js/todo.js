@@ -50,14 +50,13 @@ function handleToDoSubmit(event) {
 // toDoForm 이벤트를 추가한 부분
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-// savedToDos는 localStorage에서 가져오는 "["1", "2", "3"]" string 형태이다.
+// savedToDos는 localStorage에서 가져오는 ex ) "["1", "2", "3"]" string 형태이다.
 const savedToDos = localStorage.getItem(TODOS_KEY);
 // console.log(savedToDos);
 if (savedToDos) {
   // string 형태를 JSON.parse를 사용하여 자바스크립트에서 쓸 수 있는 array로 만든다.
   const parsedToDos = JSON.parse(savedToDos);
-  // console.log(parsedToDos); // ["1", "2", "3"]
   toDos = parsedToDos;
-  // 각각의 item에다가 console.log()한다.
+  // 각각의 item에다가 paintToDo 함수를 호출한다.
   parsedToDos.forEach(paintToDo);
 }
