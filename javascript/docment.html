@@ -1,78 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
-    <input type="text" name="txtABC" id="txt1" />
-    <input type="text" name="" id="txt2" />
+    <input type="text" name="txtABC" id="txt1" /><br />
+    <input type="text" name="" id="txt2" /><br />
 
     <p>ABC</p>
     <p>DEF</p>
 
+    <h2>당신이 관심있어 하는 프로그래밍 언어는?</h2>
     <label for="">
-      <input type="checkbox" name="chk_interest" id="" value="js">자바스크립트</input>
+      <input type="checkbox" name="chk_interest" id="" value="js" />
+      자바스크립트
     </label>
     <label for="">
-      <input type="checkbox" name="chk_interest" id="" value="html">HTML</input>
+      <input type="checkbox" name="chk_interest" id="" value="html" /> HTML
     </label>
     <label for="">
-      <input type="checkbox" name="chk_interest" id="" value="css">CSS</input>
+      <input type="checkbox" name="chk_interest" id="" value="css" /> CSS
     </label>
 
-    <div style="margin-top: 20px;">
-    <button onclick="myFunction()" id="btnSave">저장</button>
-  </div>
+    <div>
+      <label><input type="radio" name="city" id="" value="제주" />제주</label>
+      <label><input type="radio" name="city" id="" value="서울" />서울</label>
+      <label><input type="radio" name="city" id="" value="부산" />부산</label>
+    </div>
+
+    <div style="margin-top: 20px">
+      <button onclick="myFunction(event);" id="btnSave" style="padding: 10px">
+        저장
+      </button>
+    </div>
+
     <script>
-      function myFunction() {
+      function myFunction(e) {
+        // var btnEle = document.querySelector("#btnSave");
+        var btnEle = e.target;
+        // console.log(e);
+        btnEle.disabled = true;
 
-        document.querySelector("#btnSave").disabled = true;
+        setTimeout(function () {
+          btnEle.disabled = false;
+        }, 2000);
 
-        setTimeout(function() {
-          document.querySelector("#btnSave").disabled = false;
-        }, 2000)
-        // 1. id를 통해 가져오는 방법 = getElementById()
-        // const ele = document.getElementById("txt1");
+        // var ele = document.getElementById("txt1");
         // console.log(ele);
-        // const txtName = ele.name;
-        // const txtValue = ele.value;
-        // const ele2 = document.getElementById("txt2");
+
+        // var ele = document.querySelector("#txt1");
+        // console.log(ele);
+
+        // var txt1Value = ele.value;
+        // console.log(txt1Value);
+
+        // var ele2 = document.getElementById("txt2");
         // ele2.value = "가나다";
-        // console.log(ele2);
-        // console.log(txtName);
-        // console.log(txtValue);
-        // 2. tag name으로 가져오는 방법
-        // const ele = document.getElementsByTagName("p");
-        // console.log(ele); // HTMLCollection(2) 배열로 가져옴
+        // ele2.setAttribute("value", "가나다");
 
-        // const chks = document.getElementsByTagName("chk_interest");
-        // console.log(chks)
+        // var pTag = document.getElementsByTagName("p");
+        // console.log(pTag);
 
-        // for (const chk of chks) {
-        //   if(chk.checked) {
-        //     console.log(chk.value)
+        // document.querySelectorAll("p");
+
+        // var chks = document.getElementsByName("chk_interest");
+        // // console.log(chks);
+
+        // document.querySelectorAll("[name=chk_interest]");
+
+        // for (var chk of chks) {
+        //   if (chk.checked) {
+        //     console.log(chk.value);
         //   }
         // }
 
-      //   const checkedItems = document.querySelectorAll("[name=chk_interest]:checked")
-      //   for (const chk of checkedItems) {
-      //     console.log(chk.value);
-      //   }
-      // }
+        // var checkedItems = document.querySelectorAll("[name=chk_interest]:checked");
+        // for (var chk of checkedItems) {
+        //   console.log(chk.value);
+        // }
 
-      // const rdoCiries = document.getElementByName("city");
-      // for (const city of rdoCiries) {
-      //   if(city.checked) {
-      //     console.log(city.getAttribute("value"))
-      //   }
-      // }
+        // var rdoCities = document.getElementsByName("city");
+        // for (var city of rdoCities) {
+        //   if (city.checked) {
+        //     console.log(city.getAttribute("value"));
+        //   }
+        // }
 
-      // 위의 코드보다 더 짧고
-      // css 선택자를 통해서 효율적으로 짤 수 있다.
-      // console.log(document.querySelector("[name=city]:checked").value)
+        // console.log(document.querySelector("[name=city]:checked").value);
+
+        // document.getElementsByClassName
+
+        //
       }
     </script>
   </body>

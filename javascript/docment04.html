@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>여기는 h1 영역입니다.</h1>
+    <!-- beforebegin -->
+    <ul id="myUL">
+      <!-- afterbegin -->
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+      <!-- beforeend -->
+    </ul>
+    <!-- afterend -->
+    <h2>여기는 h2 영역</h2>
+    <button onclick="myFunction()">클릭</button>
+  </body>
+  <script>
+    function myFunction() {
+      // insertAdjacentHTML()
+      // 파라미터가 2개
+      // afterbegin
+      // afterend
+      // beforebegin
+      // beforeend
+
+      const addHTML = "<li>새로운 항목</li>";
+
+      // 내가 삽입할 HTML 문자열
+      document.getElementById("myUL").insertAdjacentHTML("beforeend", addHTML);
+    }
+  </script>
+</html>
