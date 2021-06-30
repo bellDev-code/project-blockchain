@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="txtABC" id="txt1" />
+    <input type="text" name="" id="txt2" />
+
+    <p>ABC</p>
+    <p>DEF</p>
+
+    <label for="">
+      <input type="checkbox" name="chk_interest" id="" value="js">자바스크립트</input>
+    </label>
+    <label for="">
+      <input type="checkbox" name="chk_interest" id="" value="html">HTML</input>
+    </label>
+    <label for="">
+      <input type="checkbox" name="chk_interest" id="" value="css">CSS</input>
+    </label>
+
+    <div style="margin-top: 20px;">
+    <button onclick="myFunction()" id="btnSave">저장</button>
+  </div>
+    <script>
+      function myFunction() {
+
+        document.querySelector("#btnSave").disabled = true;
+
+        setTimeout(function() {
+          document.querySelector("#btnSave").disabled = false;
+        }, 2000)
+        // 1. id를 통해 가져오는 방법 = getElementById()
+        // const ele = document.getElementById("txt1");
+        // console.log(ele);
+        // const txtName = ele.name;
+        // const txtValue = ele.value;
+        // const ele2 = document.getElementById("txt2");
+        // ele2.value = "가나다";
+        // console.log(ele2);
+        // console.log(txtName);
+        // console.log(txtValue);
+        // 2. tag name으로 가져오는 방법
+        // const ele = document.getElementsByTagName("p");
+        // console.log(ele); // HTMLCollection(2) 배열로 가져옴
+
+        // const chks = document.getElementsByTagName("chk_interest");
+        // console.log(chks)
+
+        // for (const chk of chks) {
+        //   if(chk.checked) {
+        //     console.log(chk.value)
+        //   }
+        // }
+
+      //   const checkedItems = document.querySelectorAll("[name=chk_interest]:checked")
+      //   for (const chk of checkedItems) {
+      //     console.log(chk.value);
+      //   }
+      // }
+
+      // const rdoCiries = document.getElementByName("city");
+      // for (const city of rdoCiries) {
+      //   if(city.checked) {
+      //     console.log(city.getAttribute("value"))
+      //   }
+      // }
+
+      // 위의 코드보다 더 짧고
+      // css 선택자를 통해서 효율적으로 짤 수 있다.
+      // console.log(document.querySelector("[name=city]:checked").value)
+      }
+    </script>
+  </body>
+</html>
