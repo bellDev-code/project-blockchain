@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button onclick="inputAmount(100);">100원 투입</button>
+    <button onclick="inputAmount(500);">500원 투입</button>
+    <button onclick="inputAmount(1000);">1000원 투입</button>
+    <br />
+    <br />
+    <div>
+      <label>음료자판기 잔돈</label
+      ><input
+        type="text"
+        name=""
+        id="total_vending_amount"
+        value="1000"
+        readonly
+      />
+      <label>투입금액</label
+      ><input type="text" name="" id="total_input_amount" value="0" readonly />
+      <label>내지갑</label
+      ><input
+        type="text"
+        name=""
+        id="total_customer_amount"
+        value="10000"
+        readonly
+      />
+    </div>
+    <br />
+    <br />
+    <button onclick="requestDrink(1);" id="btnDrink1">
+      코카콜라(700원, 재고수<span id="drink_stock1">5</span>)
+    </button>
+    <button onclick="requestDrink(2);" id="btnDrink2">
+      오렌지주스(1200원, 재고수<span id="drink_stock2">5</span>)
+    </button>
+    <button onclick="requestDrink(3);" id="btnDrink3">
+      커피(500원, 재고수<span id="drink_stock3">5</span>)
+    </button>
+    <button onclick="requestDrink(4);" id="btnDrink4">
+      물(700원, 재고수<span id="drink_stock4">5</span>)
+    </button>
+    <button onclick="requestDrink(5);" id="btnDrink5">
+      보리차(1200원, 재고수<span id="drink_stock5">5</span>)
+    </button>
+    <button onclick="requestDrink(6);" id="btnDrink6">
+      포카리(1000원, 재고수<span id="drink_stock6">5</span>)
+    </button>
+    <button onclick="requestDrink(7);" id="btnDrink7">
+      뽀로로(1300원, 재고수<span id="drink_stock7">5</span>)
+    </button>
+
+    <br />
+    <br />
+    <div
+      id="output"
+      style="
+        width: 100%;
+        height: 150px;
+        overflow-y: auto;
+        border: 2px solid #222;
+      "
+    ></div>
+    <script src="solution.js"></script>
+  </body>
+</html>

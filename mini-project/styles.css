@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+}
+
+/* 처음엔 현재 금액이 0원이므로 전부 빨간색으로 초기화한다 */
+#coffee,
+#tea,
+#water {
+  color: red;
+}
