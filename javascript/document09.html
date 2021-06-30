@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="" onblur="myFunction(event)" />
+    <script>
+      function myFunction(e) {
+        if (e.target.value == "") {
+          e.target.style.border = "3px dotted red";
+          // alert("필수 입력값입니다. 반드시 입력하세요. 입력 안하면 못나갑니다.");
+          // e.target.focus();
+
+          // font-size => fontSize로 접근해야한다.
+        }
+      }
+    </script>
+  </body>
+</html>
